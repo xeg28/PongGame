@@ -58,8 +58,9 @@ const resume = function() {
 
 
 const initSpeed = function() {
-  gameSpeed = Number(localStorage.getItem('gameSpeed')) ?? 5;
-  console.log(localStorage.getItem('gameSpeed'));
+  let speed = localStorage.getItem('gameSpeed') ?? '5';
+  gameSpeed = Number(speed);
+  console.log(gameSpeed);
   ballDirection = {x:-gameSpeed, y:getRandomInt(-gameSpeed, gameSpeed)};
 }
 
