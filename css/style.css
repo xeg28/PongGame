@@ -1,0 +1,175 @@
+:root {
+  --paddle-height: 8vh;
+  --ball-size: 2vh;
+}
+
+:root, :root.light {
+  --bg-color: white;
+  --font-color: black;
+  --ball-color: red;
+}
+
+:root.dark {
+  --bg-color: black;
+  --font-color: white;
+  --ball-color: red;
+}
+
+.hide {
+  display: none !important;
+}
+
+.gap-2 {
+  gap:2rem !important;
+}
+
+button {
+  height: 25px;
+  width: fit-content;
+  background-color: transparent;
+  border: solid 2px white;
+  color:white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.active {
+  border-color: rgb(21, 164, 253)
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  gap:10px;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap:5px;
+}
+
+body {
+  overflow:hidden;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  margin:0;
+  padding:0;
+  transition: color 300ms linear;
+  transition: background-color 300ms linear;
+}
+
+.title-screen {
+  position:absolute;
+  z-index: 2;
+  background-color: rgba(0,0,0,.9);
+  width: 100svw;
+  height: 100svh;
+  color:white;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  user-select: none;
+}
+
+.wrapper h4 {
+  margin: 0;
+}
+.menu {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu > a {
+  text-decoration: none;
+  color: white;
+}
+
+.title-screen h2 {
+  font-size: clamp(1rem, 20px + 3vh, 4rem);
+}
+
+.title-screen h3 {
+  font-size: clamp(1rem, 10px + 2vh, 2rem);
+}
+
+.countdown {
+  position: absolute;
+  font-size: 10vh;
+  color: var(--font-color);
+  top:50%;
+  left:50%;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translate(-50%, -50%);
+}
+
+.scores {
+  position:absolute;
+  color: var(--font-color);
+  left:50%;
+  transform: translateX(-50%);
+  user-select: none;
+  font-size: 5vh;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.canvas {
+  position: relative;
+  padding:0;
+  margin:0;
+  width: 100svw;
+  height: 100svh;
+}
+
+.ball {
+  height: var(--ball-size);
+  width: var(--ball-size);
+  background-color: var(--ball-color);
+  border-radius: 50%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.paddle {
+  width: 1.5vh;
+  background-color: var(--font-color);
+  height: var(--paddle-height);
+  position: absolute;
+}
+
+.paddle.right {
+  top:50%;
+  left:95%;
+  transform: translate(-50%, -50%);
+}
+
+.paddle.left {
+  top:50%;
+  left:5%;
+  transform: translate(-50%, -50%);
+}

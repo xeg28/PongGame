@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <title>Pong</title>
+  <script src="js/utility.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/options.js"></script>
+  <script src="js/cpu.js"></script>
+</head>
+<body>
+  <div class="title-screen" id="titlescreen">
+    <div class="wrapper" id="mainMenu">
+      <h2>Pong Game</h2>
+      <div class="menu" id="menu">
+        <a href="javascript:undefined" id="options-btn" onclick="openOptions(event)">Options</a>
+        <a href="javascript:undefined" id="controls-btn" onClick="openControls(event)">Controls</a>
+        <a href="javascript:undefined" id="mode-btn" mode='0' onclick="changeMode(event)">Mode: Player vs Player</a>
+      </div>
+      <h3>Click to start</h3>
+    </div>
+
+    <div class="wrapper gap-2 hide" id="controls">
+      <div class="flex-column gap-2 align-center">
+        <h4>Player 1 Up: W</h4>
+        <h4>Player 1 Down: S</h4>
+        <h4>Player 2 Up: Up Key</h4>
+        <h4>Player 2 Down: Down Key</h4>
+      </div>
+      <button class="back-btn" onclick="backButton(event)">Back</button>
+    </div>
+
+    <div class="wrapper gap-2 hide" id="options">
+      <div class="flex-column align-center">
+        <label for="paddleSizeBtns">Paddle Size</label>
+        <div class="flex-row" id="paddleSizeBtns">
+          <button class="option-btn paddle-option" size="small" onclick="setPaddleSize(event)">Small</button>
+          <button class="option-btn paddle-option" size="medium" onclick="setPaddleSize(event)">Medium</button>
+          <button class="option-btn paddle-option" size="large" onclick="setPaddleSize(event)">Large</button>
+        </div>
+      </div>
+
+      <div class="flex-column align-center">
+        <label for="gameSpeed">Game Speed</label>
+        <div class="flex-row" id="gameSpeed">
+          <button class="option-btn speed-option" speed="slow" onclick="setGameSpeed(event)">Slow</button>
+          <button class="option-btn speed-option" speed="normal" onclick="setGameSpeed(event)">Normal</button>
+          <button class="option-btn speed-option" speed="fast" onclick="setGameSpeed(event)">Fast</button>
+        </div>
+      </div>
+
+      <div class="flex-column align-center">
+        <label for="aiDifficulty">AI Difficulty</label>
+        <div class="flex-row" id="aiDifficulty">
+          <button class="option-btn difficulty-option" mode="easy"  onclick="setCPUDifficulty(event)">Easy</button>
+          <button class="option-btn difficulty-option" mode="medium" onclick="setCPUDifficulty(event)">Medium</button>
+          <button class="option-btn difficulty-option" mode="hard"  onclick="setCPUDifficulty(event)">Hard</button>
+        </div>
+      </div>
+      <button class="back-btn" onclick="backButton(event)">Back</button>
+    </div>
+
+
+    <div class="light-icon hide" id="lightIcon" onclick="toggleLightMode(event)" title="Light Mode"></div>
+    <div class="dark-icon" id="darkIcon" onclick="toggleDarkMode(event)" title="Dark Mode">
+      <div class="moon">
+        <div class="crater1"></div>
+        <div class="crater2"></div>
+        <div class="crater3"></div>
+        <div class="crater4"></div>
+        <div class="crater5"></div>
+        <div class="crater6"></div>
+        <div class="crater7"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="canvas" class="canvas">
+    <div class="scores" id="scores">0 - 0</div>
+    <div class="ball" id="ball"></div>
+    <div class="paddle left" id="player"></div>
+    <div class="paddle right" id="player2"></div>
+  </div>
+  
+</body>
+</html>

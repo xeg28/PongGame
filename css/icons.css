@@ -1,0 +1,136 @@
+.light-icon {
+  border-radius:50%;
+  width: 40px;
+  height: 40px;
+  background-color: orange;
+  box-shadow: 0 0 20px 2.85px yellow,0 0 14.25px 4.7px yellow inset;
+  position: absolute;
+  top:5%;
+  left:96%;
+  z-index: 5;
+  cursor: pointer;
+  transition: box-shadow 500ms linear;
+}
+
+.light-icon:hover {
+  box-shadow: 0 0 25px 3.25px yellow,0 0 14.25px 4.7px yellow inset;
+}
+
+/* .dark-icon {
+  background-color: black;
+  position: absolute;
+  top: 5%;
+  left: 95%;
+  z-index: 6;
+  background-color: rgba(255, 255, 160, 0.234);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  box-shadow: 5px 2px 0 0 yellow, 7px 3px 6.125px 12.85px rgba(255, 255, 160, 0.234);
+} */
+
+.dark-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 5%;
+  left: 96%;
+  z-index: 6;
+  background:#45444f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.moon{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #787780;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow:inset -8px 0 0 #57575E,
+    0 0 10px 6px rgba(255,255,255,.321);
+    transition: box-shadow 500ms linear;
+}
+
+.moon:hover {
+  box-shadow:inset -8px 0 0 #57575E,
+  0 0 12px 10px rgba(255,255,255,.321);
+}
+
+.crater1 {
+  background:#222227;
+  width:22%;
+  height:22%;
+  border-radius: 50%;
+  position: absolute;
+  top:35%;
+  left: 15%;
+  box-shadow: inset 5px 0 0 #111219;
+}
+
+.crater2 {
+  background:#252528;
+  width:10%;
+  height:10%;
+  border-radius: 50%;
+  position: absolute;
+  top:25%;
+  left: 70%;
+  box-shadow: inset 5px 0 0 #151516;
+}
+
+.crater3 {
+  background:#252528;
+  width:10%;
+  height:10%;
+  border-radius: 50%;
+  position: absolute;
+  top:75%;
+  left: 50%;
+  box-shadow: inset 5px 0 0 #111219;
+}
+
+.crater4 {
+  background:#252528;
+  width:5%;
+  height:5%;
+  border-radius: 50%;
+  position: absolute;
+  top:50%;
+  left: 60%;
+  box-shadow: inset 5px 0 0 #151516;
+}
+
+.crater5 {
+  background:#252528;
+  width:5%;
+  height:5%;
+  border-radius: 50%;
+  position: absolute;
+  top:15%;
+  left: 40%;
+  box-shadow: inset 5px 0 0 #151516;
+}
+
+.crater6 {
+  background:#252528;
+  width:5%;
+  height:5%;
+  border-radius: 50%;
+  position: absolute;
+  top:80%;
+  left: 25%;
+  box-shadow: inset 5px 0 0 #151516;
+}
+
+.crater7 {
+  background:#252528;
+  width:5%;
+  height:5%;
+  border-radius: 50%;
+  position: absolute;
+  top:70%;
+  left: 85%;
+  box-shadow: inset 5px 0 0 #151516;
+}
