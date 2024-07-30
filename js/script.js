@@ -2,6 +2,7 @@ let heldKeys = {38:false, 40:false, 87:false, 83:false};
 let isStarted = false;
 let isPaused = false;
 var playerScores = {player1:0, player2:0};
+var winningScore = 5;
 var gameSpeed = undefined;
 var ballDirection = undefined;
 var mode = undefined;
@@ -58,8 +59,9 @@ const resume = function() {
 
 
 const initSpeed = function() {
-  gameSpeed = Number(localStorage.getItem('gameSpeed')) ?? 5;
-  console.log(localStorage.getItem('gameSpeed'));
+  let speed = localStorage.getItem('gameSpeed') ?? '5';
+  gameSpeed = Number(speed);
+  console.log(gameSpeed);
   ballDirection = {x:-gameSpeed, y:getRandomInt(-gameSpeed, gameSpeed)};
 }
 
@@ -113,7 +115,6 @@ const backButton = function(event) {
   main.classList.remove('hide');
 }
 
-
 const start = function() {
   initMode();
   initSpeed();
@@ -161,10 +162,10 @@ function playRound(ball) {
 
 const checkForWinner = function() {
   let winner = null;
-  if(playerScores['player1'] == 2) {
+  if(playerScores['player1'] == winningScore) {
     winner = 'Player 1';
   }
-  else if(playerScores['player2'] == 2) {
+  else if(playerScores['player2'] == winningScore) {
     winner = (mode == '0') ? 'Player 2': 'AI';
   }
   if(!winner) return null;
